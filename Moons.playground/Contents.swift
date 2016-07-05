@@ -24,9 +24,10 @@ func greet(name: String, greeting: String) {
     print("\(greeting), \(name)!")
 }
 
+greet("Bob", greeting: "Hello")
 
 func planetDescription(planet: String, numberOfMoons: Int) {
-    print("There are \(numberOfMoons) moons orbiting \(planet)")
+    print("There is/are \(numberOfMoons) moon(s) orbiting \(planet).")
 }
 
 // This line of code gives an error.
@@ -34,10 +35,18 @@ func planetDescription(planet: String, numberOfMoons: Int) {
 //planetDescription("Jupiter", 67)
 
 planetDescription("Jupiter", numberOfMoons: 67)
+//When calling a function with multiple arguments, you have to specify the name of the argument for the second (and subsequent) arguments
 
 var planet = "Jupiter"
 var moons = 67
 planetDescription(planet, numberOfMoons: moons)
 planet = "Mars"
 moons = 2
+
 planetDescription(planet, numberOfMoons: moons)
+
+planet = "Earth"
+moons = 1
+
+
+planetDescription(planet, numberOfMoons: 1)
